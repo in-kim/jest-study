@@ -1,0 +1,15 @@
+{
+  "name": "jest_study",
+  "version": "1.0.0",
+  "description": "react test code study",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.2"
+  }
+}
