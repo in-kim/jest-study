@@ -44,6 +44,12 @@ const fn = {
       }, 300);
     });
   },
+  createUser: (name) => {
+    console.log("실제 사용자 생성");
+    return {
+      name,
+    };
+  },
 };
 
 module.exports = fn;
