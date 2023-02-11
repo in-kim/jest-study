@@ -29,3 +29,29 @@ test("3초 후에 받아온 이름은 Mike", (done) => {
   }
   fn.getName(callback);
 });
+
+test("3초 후 받아오는 나이", () => {
+  // resolve then test
+  // return fn.getAge().then((age) => {
+  //   expect(age).toBe(30);
+  // });
+
+  // resolve test
+  return expect(fn.getAge()).resolves.toBe(30);
+});
+
+test("3초 후 에러가 난다.", () => {
+  // reject catch test
+  // return fn.delayThrowError().catch((error) => {
+  //   expect(error).toMatch("error");
+  // });
+  return expect(fn.delayThrowError()).rejects.toMatch("error");
+});
+
+test("async await 3초 후 받아오는 나이", async () => {
+  // const age = await fn.getAge();
+
+  // expect(age).toBe(30);
+
+  await expect(fn.getAge()).resolves.toBe(30);
+});

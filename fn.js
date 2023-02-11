@@ -11,6 +11,21 @@ const fn = {
       // throw new Error('서버 에러 ... '); 에러 발생 시키기
     }, 3000);
   },
+  getAge: () => {
+    const age = 30;
+    return new Promise((res, rej) => {
+      setTimeout(() => {
+        res(age);
+      }, 3000);
+    });
+  },
+  delayThrowError: () => {
+    return new Promise((res, rej) => {
+      setTimeout(() => {
+        rej("error");
+      }, 3000);
+    });
+  },
 };
 
 module.exports = fn;
