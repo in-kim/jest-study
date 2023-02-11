@@ -26,6 +26,24 @@ const fn = {
       }, 3000);
     });
   },
+  connectUserDB: () => {
+    return new Promise((res) => {
+      setTimeout(() => {
+        res({
+          name: "Mike",
+          age: 30,
+          gender: "male",
+        });
+      }, 500);
+    });
+  },
+  disconnectDB: () => {
+    return new Promise((res) => {
+      setTimeout(() => {
+        res();
+      }, 300);
+    });
+  },
 };
 
 module.exports = fn;

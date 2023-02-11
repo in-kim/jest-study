@@ -1,3 +1,8 @@
+/**
+ * > npm 명령어
+ * $ npm test fn.base.test.js
+ */
+
 const fn = require("./fn");
 
 test("0.1 + 0.2 = 0.3", () => {
@@ -50,7 +55,6 @@ test("3초 후 에러가 난다.", () => {
 
 test("async await 3초 후 받아오는 나이", async () => {
   // const age = await fn.getAge();
-
   // expect(age).toBe(30);
 
   await expect(fn.getAge()).resolves.toBe(30);
